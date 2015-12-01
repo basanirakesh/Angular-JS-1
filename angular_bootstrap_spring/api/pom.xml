@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>api</artifactId>
-    <packaging>war</packaging>
+     <packaging>war</packaging>
 
     <properties>
         <jacoco.it.execution.data.file>${project.build.directory}/coverage-reports/it/jacoco.exec</jacoco.it.execution.data.file>
