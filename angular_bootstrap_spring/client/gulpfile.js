@@ -203,7 +203,7 @@ gulp.task('zip', ['compile-js', 'compile-scss'], function () {
 gulp.task('run', ['watch-scss'], function () {
     var logPrefix = '[' + util.colors.blue('run') + ']';
 
-    var apiUrl = argv['api-url'] || process.env['GULP_API_URL'] || 'http://localhost:8080/';
+    var apiUrl = argv['api-url'] || process.env['GULP_API_URL'] || 'http://localhost:8082/';
     var expressPort = argv['express-port'] || process.env['GULP_EXPRESS_PORT'] || 7777;
     var liveReloadPort = argv['live-reload-port'] || process.env['GULP_LIVE_RELOAD_PORT'] || 35729;
 

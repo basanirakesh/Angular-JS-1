@@ -17,8 +17,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <node.version>v0.12.1</node.version>
-        <npm.version>2.7.1</npm.version>
+        <node.version>v5.1.0</node.version>
+        <npm.version>3.3.12</npm.version>
 
         <phantomjs.maven.plugin.version>0.7</phantomjs.maven.plugin.version>
         <phantomjs.configuration.version>2.0.0</phantomjs.configuration.version>
@@ -121,6 +121,8 @@
                         </goals>
                         <phase>generate-resources</phase>
                         <configuration>
+                        	<nodeDownloadRoot>https://nodejs.org/dist/</nodeDownloadRoot>
+							<npmDownloadRoot>http://registry.npmjs.org/npm/-/</npmDownloadRoot>
                             <nodeVersion>${node.version}</nodeVersion>
                             <npmVersion>${npm.version}</npmVersion>
                         </configuration>
