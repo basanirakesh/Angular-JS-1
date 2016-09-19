@@ -13,23 +13,23 @@ import java.util.List;
 public class CustomerController {
 
 	@Autowired
-	private CustomerService customerService1;
+	private CustomerService customerService2;
 	
 	@PreAuthorize("isAuthenticated()")
 	@RequestMapping(value = "/customers/retrieve", method = RequestMethod.GET, produces = "application/json")
 	public List<Customer> getCustomers() {
-		return customerService1.getCustomers();
+		return customerService2.getCustomers();
 	}
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
     public boolean deleteCustomer(@PathVariable Long id) {
-        return customerService1.deleteCustomer(id);
+        return customerService2.deleteCustomer(id);
     }
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/save", method = RequestMethod.POST, produces = "application/json")
     public boolean saveCustomer(@RequestBody Customer customer) {
-        return customerService1.saveCustomer(customer);
+        return customerService2.saveCustomer(customer);
     }
 }
