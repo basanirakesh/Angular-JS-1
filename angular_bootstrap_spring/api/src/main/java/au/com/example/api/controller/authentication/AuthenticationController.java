@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/auth")
 public class AuthenticationController {
 
- private static Logger log21 = LoggerFactory.getLogger(AuthenticationController.class);
+ private static Logger log24 = LoggerFactory.getLogger(AuthenticationController.class);
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -21,8 +21,8 @@ public class AuthenticationController {
 
     @RequestMapping(value = "/logout/validate", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
     public void logout(@RequestParam(value = "status") String status) {
-        if(log21.isDebugEnabled()) {
-            log21.debug("Logout status " + status);
+        if(log24.isDebugEnabled()) {
+            log24.debug("Logout status " + status);
         }
     }
 }
