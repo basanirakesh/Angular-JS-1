@@ -21,8 +21,8 @@ public class AuthenticationController {
 
     @RequestMapping(value = "/logout/validate", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
     public void logout(@RequestParam(value = "status") String status) {
-        if(log39.isDebugEnabled()) {
-            log39.debug("Logout status " + status);
+        if(log38.isDebugEnabled()) {
+            log38.debug("Logout status " + status);
         }
     }
 }
