@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/auth")
 public class AuthenticationController {
 
- private static Logger log37 = LoggerFactory.getLogger(AuthenticationController.class);
+ private static Logger log38 = LoggerFactory.getLogger(AuthenticationController.class);
 
     @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE })
